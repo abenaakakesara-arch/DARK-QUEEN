@@ -2,33 +2,41 @@
 
 <div align="center">
 
-<img src="https://img.shields.io/badge/WHATSAPP-BOT-green?style=for-the-badge&logo=whatsapp">
+<img src="https://img.shields.io/badge/WHATSAPP-USERBOT-green?style=for-the-badge&logo=whatsapp">
 
 ### 🇱🇰 Whatsapp User Bot In Sri Lanka
 
-Simple & Fast WhatsApp User Bot Created By DARK-QUEEN
+Simple Fast And Powerful WhatsApp User Bot
 
 </div>
 
 ---
 
-## ✨ Features
+# ✨ Features
 
-- 🤖 Auto Reply System
+- 🤖 Auto Reply
 - 🎵 Song Download
-- 📷 Photo & Video Download
-- 😎 Sticker Commands
+- 📷 Video Download
+- 🖼️ Image Commands
+- 😎 Sticker Maker
 - 👥 Group Management
 - 🔍 Search Commands
 - ⚡ Fast Response
 - 🔒 Safe & Private
+- 🌐 Multi Device Support
 
 ---
 
-## 🚀 Installation
+# 🚀 Installation
+
+## Clone Repository
 
 ```bash
 git clone https://github.com/USERNAME/DARK-QUEEN.git
-cd DARK-QUEEN
-npm install
+
+## 🔐 QR Code Login
+
+1. Run the bot
+
+```bash
 npm start
