@@ -1,0 +1,7 @@
+async function startBot() {
+
+console.log("Bot Starting")
+
+}
+
+startBot()
