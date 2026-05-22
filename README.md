@@ -1,77 +1,47 @@
-# 👑 DARK-QUEEN
+<br>
 
-<div align="center">
+## DARK QUEEN 👑🖤 - A Javascript WhatsApp User Bot
 
-<img src="https://img.shields.io/badge/WHATSAPP-USERBOT-green?style=for-the-badge&logo=whatsapp">
+<br>
 
-### 🇱🇰 Whatsapp User Bot In Sri Lanka
+🔮 `The main goal of creating this bot is to fully leverage WhatsApp and simplify its functionality.`
 
-Simple Fast And Powerful WhatsApp User Bot
+<br>
+ 
+<p align="center">  
+  <a href="https://telegra.ph/file/1743544c222ffd613c219.jpg">
+    <img alt="dark-queen" height="300" src="https://telegra.ph/file/1743544c222ffd613c219.jpg">
+  </a>
+</p>  
 
-</div>
+<br>
+<br>
+
+💡 This bot is created to download and find various things quickly, logo, photo edit and many other features. This bot is created using **[Baileys](https://github.com/WhiskeySockets/Baileys)**
+
+<br>
+<br>
+
+![repo views](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FDarkQueen%2FDARK-QUEEN&count_bg=%2379C83D&title_bg=%23555555&icon=gitpod.svg&icon_color=%23E7E7E7&title=Views&edge_flat=false)
 
 ---
 
-# ✨ Features
+## 🚀 Features
 
-- 🤖 Auto Reply
-- 🎵 Song Download
-- 📷 Video Download
-- 🖼️ Image Commands
-- 😎 Sticker Maker
-- 👥 Group Management
-- 🔍 Search Commands
-- ⚡ Fast Response
-- 🔒 Safe & Private
-- 🌐 Multi Device Support
+- 🎵 Song Downloader
+- 🎬 Video Downloader
+- 🖼️ Photo Editor
+- 🤖 AI Commands
+- 📥 Media Tools
+- 🔍 Search Features
+- 👑 Group Management
+- ⚡ Fast & Simple
 
 ---
 
-# 🚀 Installation
+## 📦 Deployment
 
-## Clone Repository
+### Pair Code
 
 ```bash
-git clone https://github.com/USERNAME/DARK-QUEEN.git
-
-const { default: makeWASocket, useMultiFileAuthState } = require("@whiskeysockets/baileys")
-const readline = require("readline")
-
-async function startBot() {
-
-const { state, saveCreds } = await useMultiFileAuthState("session")
-
-const rl = readline.createInterface({
-input: process.stdin,
-output: process.stdout
-})
-
-const question = (text) =>
-new Promise((resolve) => rl.question(text, resolve))
-
-const sock = makeWASocket({
-auth: state
-})
-
-if (!sock.authState.creds.registered) {
-
-const phoneNumber = await question(
-"Enter Your Number : "
-)
-
-const code = await sock.requestPairingCode(phoneNumber)
-
-console.log(`
-=============================
-YOUR PAIR CODE : ${code}
-=============================
-`)
-
-}
-
-sock.ev.on("creds.update", saveCreds)
-
-console.log("DARK-QUEEN BOT CONNECTED ✅")
-}
-
-startBot()
+npm start
