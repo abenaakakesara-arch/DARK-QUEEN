@@ -1,47 +1,34 @@
-<br>
+# 👑 DARK-QUEEN
 
-## DARK QUEEN 👑🖤 - A Javascript WhatsApp User Bot
+<div align="center">
 
-<br>
+<img src="https://img.shields.io/badge/WHATSAPP-BOT-green?style=for-the-badge&logo=whatsapp">
 
-🔮 `The main goal of creating this bot is to fully leverage WhatsApp and simplify its functionality.`
+### 🇱🇰 Whatsapp User Bot In Sri Lanka
 
-<br>
- 
-<p align="center">  
-  <a href="https://telegra.ph/file/1743544c222ffd613c219.jpg">
-    <img alt="dark-queen" height="300" src="https://telegra.ph/file/1743544c222ffd613c219.jpg">
-  </a>
-</p>  
+Simple & Fast WhatsApp User Bot Created By DARK-QUEEN
 
-<br>
-<br>
-
-💡 This bot is created to download and find various things quickly, logo, photo edit and many other features. This bot is created using **[Baileys](https://github.com/WhiskeySockets/Baileys)**
-
-<br>
-<br>
-
-![repo views](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FDarkQueen%2FDARK-QUEEN&count_bg=%2379C83D&title_bg=%23555555&icon=gitpod.svg&icon_color=%23E7E7E7&title=Views&edge_flat=false)
+</div>
 
 ---
 
-## 🚀 Features
+## ✨ Features
 
-- 🎵 Song Downloader
-- 🎬 Video Downloader
-- 🖼️ Photo Editor
-- 🤖 AI Commands
-- 📥 Media Tools
-- 🔍 Search Features
-- 👑 Group Management
-- ⚡ Fast & Simple
+- 🤖 Auto Reply System
+- 🎵 Song Download
+- 📷 Photo & Video Download
+- 😎 Sticker Commands
+- 👥 Group Management
+- 🔍 Search Commands
+- ⚡ Fast Response
+- 🔒 Safe & Private
 
 ---
 
-## 📦 Deployment
-
-### Pair Code
+## 🚀 Installation
 
 ```bash
+git clone https://github.com/USERNAME/DARK-QUEEN.git
+cd DARK-QUEEN
+npm install
 npm start
