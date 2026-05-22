@@ -36,29 +36,68 @@ npm start
 ## 🔗 PAIR CODE
 
 <p align="center">
-  <a href="https://your-render-link.onrender.com/pair">
-    <img src="https://img.shields.io/badge/PAIR-CODE-green?style=for-the-badge&logo=whatsapp">
+  <a href="https://your-bot-name.onrender.com/pair">
+    <img src="https://img.shields.io/badge/PAIR_CODE-DARK_QUEEN-green?style=for-the-badge&logo=whatsapp">
   </a>
 </p>
 
 ---
 
-## 📲 HOW TO CONNECT
+## 🚀 AUTO DEPLOY
 
-1. Open WhatsApp
-2. Go To Linked Devices
-3. Click "Link a Device"
-4. Click "Link with phone number"
-5. Open Pair Code Link
-6. Enter Your Number
-7. Get Pair Code ✅
+<p align="center">
+  <a href="https://render.com/deploy">
+    <img src="https://img.shields.io/badge/DEPLOY_TO_RENDER-blue?style=for-the-badge&logo=render">
+  </a>
+</p>
 
 ---
 
-## 🌐 PAIR SITE
+## 📲 HOW TO GET PAIR CODE
 
 ```bash
-https://your-render-link.onrender.com/pair
+1. Open Pair Site
+2. Enter WhatsApp Number
+3. Click Generate Code
+4. Link Device
+5. Bot Connected ✅
+```
+
+---
+
+## 🌐 PAIR LINK
+
+```bash
+https://your-bot-name.onrender.com/pair
+```
+
+---
+
+## ⚡ AUTO DEPLOY ENABLE
+
+```bash
+Render Dashboard
+   ↓
+Settings
+   ↓
+Auto Deploy → ON
+```
+
+---
+
+## 💻 RUN LOCALLY
+
+```bash
+npm install
+node index.js
+```
+
+---
+
+## 👑 DARK-QUEEN MD
+
+```bash
+Bot Created By Kesara
 ```
 
 ## 🚀 DEPLOY NOW
