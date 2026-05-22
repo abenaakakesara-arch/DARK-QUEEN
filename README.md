@@ -47,10 +47,6 @@ npm start
  ``
 ## 🚀 DARK QUEEN
 
-```
-Bot Created By Kesara
-
-
 ``
 ## 🚀 DEPLOY NOW
 
