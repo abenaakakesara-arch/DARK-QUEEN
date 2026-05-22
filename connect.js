@@ -1,104 +1,89 @@
 const {
   default: makeWASocket,
   useMultiFileAuthState,
-  DisconnectReason,
-  fetchLatestBaileysVersion
-} = require("@whiskeysockets/baileys");
+  DisconnectReason
+} = require("@whiskeysockets/baileys")
 
-const P = require("pino");
-const fs = require("fs");
+const pino = require("pino")
+const fs = require("fs")
+const path = require("path")
 
-async function connectBot() {
+const handler = require("./handler")
+
+async function startBot() {
 
   const { state, saveCreds } =
-    await useMultiFileAuthState("./session");
-
-  const { version } =
-    await fetchLatestBaileysVersion();
+    await useMultiFileAuthState("./session")
 
   const sock = makeWASocket({
-    version,
-    logger: P({ level: "silent" }),
-    printQRInTerminal: false,
+    logger: pino({ level: "silent" }),
     auth: state,
+    printQRInTerminal: true,
     browser: ["DARK-QUEEN", "Chrome", "1.0.0"]
-  });
+  })
 
-  sock.ev.on("creds.update", saveCreds);
+  // CONNECT MESSAGE
+  sock.ev.on("connection.update",
+    async (update) => {
 
-  sock.ev.on("connection.update", async(update) => {
+      const { connection, lastDisconnect } = update
 
-    const { connection, lastDisconnect } = update;
+      if (connection === "open") {
 
-    if (connection === "connecting") {
+        console.log("✅ DARK-QUEEN CONNECTED")
 
-      console.log("Connecting To WhatsApp...");
+      }
 
-    }
+      else if (connection === "close") {
 
-    if (connection === "open") {
+        const reason =
+          lastDisconnect?.error?.output?.statusCode
 
-      console.log(`
-╔══════════════════════╗
-     DARK-QUEEN
-╚══════════════════════╝
+        if (reason !== DisconnectReason.loggedOut) {
 
-Bot Connected Successfully ✅
-`);
+          startBot()
 
-    }
+        } else {
 
-    if (connection === "close") {
+          console.log("❌ Connection Closed")
 
-      const reason =
-        lastDisconnect?.error?.output?.statusCode;
+        }
 
-      console.log("Connection Closed :", reason);
-
-      if (reason !== DisconnectReason.loggedOut) {
-        connectBot();
       }
 
     }
+  )
 
-  });
+  // SAVE SESSION
+  sock.ev.on("creds.update", saveCreds)
 
-  sock.ev.on("messages.upsert", async({ messages }) => {
+  // MESSAGE HANDLER
+  sock.ev.on(
+    "messages.upsert",
+    async ({ messages }) => {
 
-    const m = messages[0];
+      const msg = messages[0]
 
-    if (!m.message) return;
+      if (!msg.message) return
 
-    const msg =
-      m.message.conversation ||
-      m.message.extendedTextMessage?.text;
-
-    if (!msg) return;
-
-    console.log("Message :", msg);
-
-    if (msg === ".alive") {
-
-      await sock.sendMessage(
-        m.key.remoteJid,
-        {
-          text: "DARK-QUEEN BOT IS ONLINE ✅"
-        }
-      );
+      handler(sock, msg)
 
     }
+  )
 
-  });
+  // WELCOME MESSAGE
+  sock.ev.on(
+    "group-participants.update",
+    async (update) => {
+
+      const welcome =
+        require("./plugins/welcome")
+
+      await welcome(sock, update)
+
+    }
+  )
 
 }
 
-connectBot();
-const welcome = require("./plugins/welcome")
-
-sock.ev.on(
-  "group-participants.update",
-  async (update) => {
-    await welcome(sock, update)
-  }
-)
-handler(sock, msg)
+startBot()
