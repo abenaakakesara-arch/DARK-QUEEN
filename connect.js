@@ -101,3 +101,4 @@ sock.ev.on(
     await welcome(sock, update)
   }
 )
+handler(sock, msg)
