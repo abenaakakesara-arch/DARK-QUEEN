@@ -33,73 +33,25 @@ cd DARK-QUEEN
 npm install
 npm start
 
-## 🔗 PAIR CODE
+```
+
+## 🚀 PAIR CODE
 
 <p align="center">
-  <a href="https://your-bot-name.onrender.com/pair">
+  <a href="https://dark-queen-md.onrender.com/pair">
     <img src="https://img.shields.io/badge/PAIR_CODE-DARK_QUEEN-green?style=for-the-badge&logo=whatsapp">
   </a>
 </p>
 
----
 
-## 🚀 AUTO DEPLOY
+ ``
+## 🚀 DARK QUEEN
 
-<p align="center">
-  <a href="https://render.com/deploy">
-    <img src="https://img.shields.io/badge/DEPLOY_TO_RENDER-blue?style=for-the-badge&logo=render">
-  </a>
-</p>
-
----
-
-## 📲 HOW TO GET PAIR CODE
-
-```bash
-1. Open Pair Site
-2. Enter WhatsApp Number
-3. Click Generate Code
-4. Link Device
-5. Bot Connected ✅
 ```
-
----
-
-## 🌐 PAIR LINK
-
-```bash
-https://your-bot-name.onrender.com/pair
-```
-
----
-
-## ⚡ AUTO DEPLOY ENABLE
-
-```bash
-Render Dashboard
-   ↓
-Settings
-   ↓
-Auto Deploy → ON
-```
-
----
-
-## 💻 RUN LOCALLY
-
-```bash
-npm install
-node index.js
-```
-
----
-
-## 👑 DARK-QUEEN MD
-
-```bash
 Bot Created By Kesara
-```
 
+
+``
 ## 🚀 DEPLOY NOW
 
 <p align="center">
