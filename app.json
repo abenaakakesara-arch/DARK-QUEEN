@@ -1,0 +1,61 @@
+{
+  "name": "DARK-QUEEN",
+  "description": "Simple & Fast WhatsApp User Bot Created By DARK-QUEEN",
+  "logo": "https://files.catbox.moe/8xq4u2.jpg",
+  "keywords": [
+    "dark-queen",
+    "whatsapp",
+    "bot",
+    "baileys",
+    "multi-device"
+  ],
+  "success_url": "/",
+
+  "env": {
+
+    "BOT_NUMBER": {
+      "description": "Enter Your WhatsApp Number",
+      "required": true
+    },
+
+    "OWNER_NAME": {
+      "description": "Enter Bot Owner Name",
+      "required": true
+    },
+
+    "BOT_NAME": {
+      "description": "Enter Bot Name",
+      "required": true
+    },
+
+    "SESSION_ID": {
+      "description": "Enter Session ID",
+      "required": false
+    },
+
+    "PREFIX": {
+      "description": "Bot Prefix",
+      "value": ".",
+      "required": true
+    },
+
+    "GITHUB_USERNAME": {
+      "description": "Enter GitHub Username",
+      "required": true
+    },
+
+    "GITHUB_AUTH_TOKEN": {
+      "description": "Enter GitHub Token",
+      "required": true
+    }
+
+  },
+
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  }
+
+}
