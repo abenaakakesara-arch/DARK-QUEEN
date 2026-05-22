@@ -93,3 +93,11 @@ Bot Connected Successfully ✅
 }
 
 connectBot();
+const welcome = require("./plugins/welcome")
+
+sock.ev.on(
+  "group-participants.update",
+  async (update) => {
+    await welcome(sock, update)
+  }
+)
