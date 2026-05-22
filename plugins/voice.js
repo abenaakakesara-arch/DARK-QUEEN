@@ -52,7 +52,7 @@ module.exports = {
       if (text.includes("mk")) {
 
         await sock.sendMessage(from, {
-          text: "😄 Mokada karanne?"
+          text: "😄 mn mk "
         })
 
       }
